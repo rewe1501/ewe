@@ -22,28 +22,26 @@ kntl = TelegramClient('kynan', api_id, api_hash).start(bot_token=bot_token)
 
 
 spam_chats = []
-    " "
-)
 
 
 @kntl.on(events.NewMessage(pattern="^/start$"))
 async def help(event):
-  helptext = "**Ada 2 Mode Tag All Cok, Kalo /tagall emot sange + nama user. kalo /all itu random emote tanpa nama user.**"
+  helptext = "**auya.**"
   await event.reply(
     helptext,
     link_preview=False,
     buttons=(
       [
-        Button.url('Owner', 't.me/kagebunshiiin'),
+        Button.url('guaa', 't.me/rewe_anu'),
       ],
       [
-        Button.url('Support', 't.me/suportkage'),
-        Button.url('Channel', 't.me/kagestore69'),
+        Button.url('supprot', 't.me/supprotrewe'),
+        Button.url('ch guaa', 't.me/nunagabut2'),
       ],
     )
   )
   
-@kntl.on(events.NewMessage(pattern="^/tagall ?(.*)"))
+@kntl.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
